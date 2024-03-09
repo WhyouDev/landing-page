@@ -5,15 +5,17 @@
     autoplay-disable-on-interaction="false"
     effect="fade"
   >
+  <!-- Blok New Syntax -->
+  @for (imgBg of listImages; track imgBg) {
     <swiper-slide>
-      <img src="assets/images/bg-1.jpg" alt="banner image" class="banner-image"/>
+      <img [src]="imgBg" alt="banner image" class="banner-image"/>
     </swiper-slide>
-    <swiper-slide>
-      <img src="assets/images/bg-2.jpg" alt="banner image" class="banner-image"/>
-    </swiper-slide>
-    <swiper-slide>
-      <img src="assets/images/bg-3.jpg" alt="banner image" class="banner-image"/>
-    </swiper-slide>
+  }
+
+  <!-- Blok old Syntax -->
+    <!-- <swiper-slide *ngFor="let imgBg of listImages">
+      <img [src]="imgBg" alt="banner image" class="banner-image"/>
+    </swiper-slide> -->
   </swiper-container>
   <div class="banner-overlay">
     <div class="banner-layer"></div>
